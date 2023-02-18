@@ -45,6 +45,16 @@
 <h2 align="middle">Section I: Rasterization</h2>
 
 <h3 align="middle">Part 1: Rasterizing single-color triangles</h3>
+  <p>Walk through how you rasterize triangles in your own words.
+  </p>
+
+  <p>In order to rasterize triangles, we first have to compute a bounding box of the triangle by finding the min & max x & y values of the pixels that are contained by the 3 points of the triangle. I did this by computing the min & max x & y values for the 3 points, and then finding which pixel these min/max values associated with using a series of checks which determined if the min and max points were above or below a 0.5 threshold to decide if the bounding pixel was before or after the relevant point. After this bounding box is found, we sample each pixel in the box and conduct 3 line-tests (utilizing the definition of a line-test in lecture Li(x,y)=-(x-xi)dyi+(y-yi)dxi), and if either all points are less than or equal to 0 or all points are greater than or equal to 0, we fill in the pixel. We do both all less than or equal to and all greater than or equal to in order to account for both clockwise and counterclockwise points.</p>
+
+  <p>Explain how your algorithm is no worse than one that checks each sample within the bounding box of the triangle.</p>
+
+  <p>My algorithm is no worse than one that checks each sample within the bounding box of the triangle because my algorithm checks each sample within the bounding box of the triangle. By computing the minimum and maximum x and y pixels via flooring (or ceiling) the point and adding (or subtracting) 0.5, I successfully make the program only check the bounding box rather than the entire frame buffer.</p>
+
+  <p>Show a png screenshot of basic/test4.svg with the default viewing parameters and with the pixel inspector centered on an interesting part of the scene.</p>
 
 <p>Here is an example 2x2 gridlike structure using an HTML table. Each <b>tr</b> is a row and each <b>td</b> is a column in that row. You might find this useful for framing and showing your result images in an organized fashion.</p>
 
@@ -52,23 +62,12 @@
   <table style="width=100%">
     <tr>
       <td>
-        <img src="images/image1.png" align="middle" width="400px"/>
-        <figcaption align="middle">Caption goes here.</figcaption>
+        <img src="images/task1-1.png" align="middle" width="400px"/>
+        <figcaption align="middle">test4 screenshot</figcaption>
       </td>
       <td>
-        <img src="images/image2.png" align="middle" width="400px"/>
-        <figcaption align="middle">Caption goes here.</figcaption>
-      </td>
-    </tr>
-    <br>
-    <tr>
-      <td>
-        <img src="images/image3.png" align="middle" width="400px"/>
-        <figcaption align="middle">Caption goes here.</figcaption>
-      </td>
-      <td>
-        <img src="images/image4.png" align="middle" width="400px"/>
-        <figcaption align="middle">Caption goes here.</figcaption>
+        <img src="images/task1-2.png" align="middle" width="400px"/>
+        <figcaption align="middle">test4 screenshot w/pixel inspector</figcaption>
       </td>
     </tr>
   </table>
@@ -99,6 +98,32 @@
 <p>If you are not participating in the optional art competition, don't worry about this section!</p>
 
 <h3 align="middle">Part 7: Draw something interesting!</h3>
+
+  <div align="middle">
+    <table style="width=100%">
+      <tr>
+        <td>
+          <img src="images/image1.png" align="middle" width="400px"/>
+          <figcaption align="middle">Caption goes here.</figcaption>
+        </td>
+        <td>
+          <img src="images/image2.png" align="middle" width="400px"/>
+          <figcaption align="middle">Caption goes here.</figcaption>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          <img src="images/image3.png" align="middle" width="400px"/>
+          <figcaption align="middle">Caption goes here.</figcaption>
+        </td>
+        <td>
+          <img src="images/image4.png" align="middle" width="400px"/>
+          <figcaption align="middle">Caption goes here.</figcaption>
+        </td>
+      </tr>
+    </table>
+  </div>
 
 </body>
 </html>
