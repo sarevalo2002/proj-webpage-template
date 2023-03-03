@@ -39,7 +39,7 @@
 
 <body>
 
-<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2018</h1>
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2023</h1>
 <h1 align="middle">Project 2: Mesh Edit</h1>
 <h2 align="middle">Sebastian Arevalo</h2>
 
@@ -49,7 +49,7 @@
 
 <h2 align="middle">Overview</h2>
 <p>
-    YOUR RESPONSE GOES HERE
+    I implemented two main things in this project: A 3D-renderer utilizing Bezier curves, and a 3D-renderer utilizing triangle meshes. The renderer that utilizing Bezier curves took advantage of De Casteljau’s algorithm and (its separable application) to form both Bezier curves and Bezier surfaces, which allowed 3D objects to be rendered. The rendered utilizing triangle meshes was more integrated in this project, with the half-edge data structure allowing me to create a renderer that could find the norm of, flip, split, and conduct loop subdivision on the triangle meshes that made up the rendered 3D objects. This allowed me to easily manipulate the objects themselves to make them more realistic with smooth rounded edges while maintaining the general shape of the objects themselves. I found this project super fun, and I learned a lot, especially about utilizing separable 1D Bezier curves to form Bezier surfaces as well as how the process of loop subdivision works on triangle meshes. Before I was unsure exactly how we would go about finding multiple Bezier curves to create a Bezier surface, but after implementing it myself I learned how rather simple the whole procedure is, with a recursive approach that essentially simplifies the multi dimensional problem into the single dimensional one that we know how to solve. Meanwhile, for the loop subdivision algorithm, before implementing it myself I was completely lost on how it worked or what the specifics of the procedure were. But after taking some time and splitting the algorithm into easy to manage parts, I finally understand how loop subdivision works and what a few drawbacks of the algorithm are (such as how it handles sharp edges and corners), but also how pre-processing could mitigate these drawbacks. Overall super fun project and it made me even more excited to see what the course will introduce next.
 </p>
 <br>
 
@@ -179,7 +179,7 @@
                 </td>
                 <td>
                     <img src="images/task1-14.png" align="middle" width="400px"/>
-                    <figcaption>New Curve</figcaption>
+                    <figcaption>New t-Value</figcaption>
                 </td>
             </tr>
         </table>
@@ -548,6 +548,9 @@
     Yes, we can perform some edge splits across the “faces” of the cube to make the faces symmetric (with edges forming an “X” on the “faces” of the cube) to successfully have the cube subdivide symmetrically. The reason why the default cube becomes slightly asymmetric is because each “face” of the cube only has one edge across it, causing the cube to have protruding points that tend towards a few favored corners when loop subdivision occurs. This makes sense, as only a single edge on the “face” of the cube, means that when the loop subdivision algorithm is run, there is a single split across the single edge on each face which creates groups of vertices close to vertices not connected by single edge, which eventually result in biased pointed corners to create an asymmetric shape. The preprocessing I described earlier helps to alleviate these effects because now there is uniform splitting across the cube (as each “face” of the cube has the same structure of edges, that being the “X” shape they form), meaning newly vertices are evenly distributed across the cube, no longer grouped in favored corners.
 </p>
 <br>
+
+<h3 align="middle">Link to Webpage</h3>
+    <p>https://sarevalo2002.github.io/proj-webpage-template/</p>
 
 <!--
 <b>
