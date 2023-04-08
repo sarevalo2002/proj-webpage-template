@@ -85,137 +85,137 @@
   <h3>What We Plan to Deliver</h3>
   
   <p>
-    What are we trying to accomplish?
-Accurately simulate how a “basic” liquid like water flows in the real world, either via coming out of a faucet or dropping into the scene from the sky
-Build off of the previous point to simulate liquids with different viscosities
+    What are we trying to accomplish?<br>
+Accurately simulate how a “basic” liquid like water flows in the real world, either via coming out of a faucet or dropping into the scene from the sky<br>
+Build off of the previous point to simulate liquids with different viscosities<br>
 Finally, add solid objects to the world and simulate how the liquids interact with the solid objects (the liquids pouring onto the objects), or potentially how the solid objects interact with the liquids (dropping the objects into a pool of the liquid)
  </p>
   
   <p>
-    What results are we going for?
-Have liquids appear “normal,” that is they flow seamlessly, tend to stick to other liquid “particles,” but also appear natural when separating upon collision with the world or an object
-Have liquids with low viscosities have little resistance in their flow and have little trouble falling onto the ground, not really sticking to objects
+    What results are we going for?<br>
+Have liquids appear “normal,” that is they flow seamlessly, tend to stick to other liquid “particles,” but also appear natural when separating upon collision with the world or an object<br>
+Have liquids with low viscosities have little resistance in their flow and have little trouble falling onto the ground, not really sticking to objects<br>
 Have liquids with high viscosities have high resistance in their flow and appear “thick,” with the liquid “particles” tending to stick closer together and to any solid objects they collide with by having high attractional forces.
  </p>
   
   <p>
-    Why do we think we can accomplish these goals?
-We believe we can accomplish these goals because of the resources at our disposal:
-We have the content in the lecture to give us a general idea of how liquids are simulated in computer graphics, and which physics ideas pertain to accurate liquid simulation. In particular, the Navier Stokes equations have terms which describe the chemical property of viscosity and density is a programmable physical property.
-We have found a few research papers that appear to align with our goals and further explain the physics behind fluid simulation. A particularly useful paper is Real-Time Fluid Dynamics for Games by Jos Stam - which gives a simple yet efficient way to build a fluid simulator with features to test both viscosity and density.
-We’ve garnered enough experience with C++ over this semester that the hardest part of the project will be in researching/applying fluid simulation ideas, rather than struggling to program the project
+    Why do we think we can accomplish these goals?<br>
+We believe we can accomplish these goals because of the resources at our disposal:<br>
+We have the content in the lecture to give us a general idea of how liquids are simulated in computer graphics, and which physics ideas pertain to accurate liquid simulation. In particular, the Navier Stokes equations have terms which describe the chemical property of viscosity and density is a programmable physical property.<br>
+We have found a few research papers that appear to align with our goals and further explain the physics behind fluid simulation. A particularly useful paper is Real-Time Fluid Dynamics for Games by Jos Stam - which gives a simple yet efficient way to build a fluid simulator with features to test both viscosity and density.<br>
+We’ve garnered enough experience with C++ over this semester that the hardest part of the project will be in researching/applying fluid simulation ideas, rather than struggling to program the project<br>
 Also, since past final projects have done fluid simulations, we believe we could accomplish our fluid simulation project in a reasonable time frame
  </p>
   
   <p>
-    What will our demo look like?
-Ideally we’ll have a box-like scene
-We’ll introduce the liquids either through a faucet-like structure, or just have the liquid fall from the sky (similar to previous fluid simulation projects)
-We plan to have liquids with different viscosities have different colors to help differentiate in the demo which liquid should be behaving in which way
-When we introducing other solid objects, we’ll have them either sitting on the floor of the scene, floating in the scene, or we’ll drop them into the scene
+    What will our demo look like?<br>
+Ideally we’ll have a box-like scene<br>
+We’ll introduce the liquids either through a faucet-like structure, or just have the liquid fall from the sky (similar to previous fluid simulation projects)<br>
+We plan to have liquids with different viscosities have different colors to help differentiate in the demo which liquid should be behaving in which way<br>
+When we introducing other solid objects, we’ll have them either sitting on the floor of the scene, floating in the scene, or we’ll drop them into the scene<br>
 Whichever option we choose, we’ll be sure to accurately display their interaction with the current liquid in the scene
  </p>
   
   <p>
-    How will we measure the quality / performance of our system (e.g. graphs showing speedup, or quantifying accuracy)?
-The primary measure of quality of the system will be qualitative, that is, how accurate does the liquid act compared to how it would in real life, asking questions such as:
-Do liquids with a low viscosity flow quickly and have little resistance?
-Do liquids with high viscosity do the opposite?
-How well do the liquid particles stay together/separate when colliding with other objects, the scene, or other liquid particles?
+    How will we measure the quality / performance of our system (e.g. graphs showing speedup, or quantifying accuracy)?<br>
+The primary measure of quality of the system will be qualitative, that is, how accurate does the liquid act compared to how it would in real life, asking questions such as:<br>
+Do liquids with a low viscosity flow quickly and have little resistance?<br>
+Do liquids with high viscosity do the opposite?<br>
+How well do the liquid particles stay together/separate when colliding with other objects, the scene, or other liquid particles?<br>
 We will also utilize speed as a measure of performance, determining how “choppy” the rendering of the liquid is to see how efficiently our code can handle the movement of all the liquid particles
  </p>
   
   <p>
-    What questions do you plan to answer with your analysis?
-What ideas in physics are necessary to accurately simulate liquids (particularly those with a different viscosity than water) in computer graphics?
+    What questions do you plan to answer with your analysis?<br>
+What ideas in physics are necessary to accurately simulate liquids (particularly those with a different viscosity than water) in computer graphics?<br>
 What techniques can we use to optimize fluid simulation?
  </p>
   
   <h3>What We Hope to Deliver</h3>
   
   <p>
-    What are we trying to accomplish?
-On top of what we introduced in the previous section, we hope to include different densities into our fluid simulation as a means of seeing how fluids interact with one another
+    What are we trying to accomplish?<br>
+On top of what we introduced in the previous section, we hope to include different densities into our fluid simulation as a means of seeing how fluids interact with one another<br>
 (Only if things go VERY well) Simulate into how specific types of fluids/objects would react in real life (such as oil’s combustibility of the steaming reaction between water and alkaline metals)
  </p>
   
   <p>
-    What results are we going for?
+    What results are we going for?<br>
 Liquids of higher densities should “sink” into a layer below any liquids of lower densities
  </p>
   
   <p>
-   Why do we think we can accomplish these goals?
+   Why do we think we can accomplish these goals?<br>
 Since this would only be attempted after the previous section, we would have experience with how liquids interact with solid objects, so we could build off of the physical ideas that it took to implement these liquid-solid interactions to expand it to implementing liquid-liquid interactions
  </p>
   
   <p>
-    What will our demo look like?
+    What will our demo look like?<br>
 Same as previous section, but with the addition of adding the capability to introduce more than one type of liquid in the same scene
  </p>
   
   <p>
-    How will we measure the quality / performance of our system (e.g. graphs showing speedup, or quantifying accuracy)?
+    How will we measure the quality / performance of our system (e.g. graphs showing speedup, or quantifying accuracy)?<br>
 Same measurements as previous section, but with the addition of how accurately high density liquids fall below low density ones
  </p>
   
   <p>
-    What questions do you plan to answer with your analysis?
-How do we simulate liquids with different viscosities to act accordingly (i.e., how would they act in the physical world)?
-How do different liquid particles interact with one another?
-How to optimize all the different liquid particles through both computer science techniques and physical ideas?
+    What questions do you plan to answer with your analysis?<br>
+How do we simulate liquids with different viscosities to act accordingly (i.e., how would they act in the physical world)?<br>
+How do different liquid particles interact with one another?<br>
+How to optimize all the different liquid particles through both computer science techniques and physical ideas?<br>
 (Only if things go VERY well) How to simulate gas?
  </p>
   <br>
   <h2 align="middle">Schedule</h2>
   
   <p>
-    Week 1 (4/9-4/15):
-End of the week goal: Be able to simulate water dropping into a scene from the sky or flow out of a faucet
-This need not be “perfect” simulation, could look awkward for now
-Some subtasks:
-Read through resources in this paper and a few more (pertaining particularly to water simulation)
-Find a platform to render this simulation by middle of the week
+    Week 1 (4/9-4/15):<br>
+End of the week goal: Be able to simulate water dropping into a scene from the sky or flow out of a faucet<br>
+This need not be “perfect” simulation, could look awkward for now<br>
+Some subtasks:<br>
+Read through resources in this paper and a few more (pertaining particularly to water simulation)<br>
+Find a platform to render this simulation by middle of the week<br>
 Start programming before the weekend begins to have time to code and debug during the weekend
 
  </p>
   
   <p>
-    Week 2 (4/16-4/22):
-End of the week goal: Be able to simulate fluids with different viscosities
-Some subtasks:
-Read through resources in this paper and a few more (pertaining particularly to how to incorporate viscosity in fluid simulation)
-Begin programming this section by middle of the week
-Look into how to incorporate different shading (color) for different viscosities to help make eventual demo more clear
+    Week 2 (4/16-4/22):<br>
+End of the week goal: Be able to simulate fluids with different viscosities<br>
+Some subtasks:<br>
+Read through resources in this paper and a few more (pertaining particularly to how to incorporate viscosity in fluid simulation)<br>
+Begin programming this section by middle of the week<br>
+Look into how to incorporate different shading (color) for different viscosities to help make eventual demo more clear<br>
 Begin Milestone report before weekend
 
  </p>
   
   <p>
-    Week 3 (4/23-4/29):
-NOTE: MILESTONE DUE 4/25
-End of the week goal: Be able to simulate fluids interacting with solid objects
-Some subtasks:
-Read through resources in this paper and a few more (pertaining particularly to how to accurately simulate liquid-solid interactions)
-Finish Milestone Report BEFORE 4/25
-Decide on how to incorporate physical objects (floating, sitting on the ground, and/or dropped into scene)
-Begin programming this section by middle of the week
+    Week 3 (4/23-4/29):<br>
+NOTE: MILESTONE DUE 4/25<br>
+End of the week goal: Be able to simulate fluids interacting with solid objects<br>
+Some subtasks:<br>
+Read through resources in this paper and a few more (pertaining particularly to how to accurately simulate liquid-solid interactions)<br>
+Finish Milestone Report BEFORE 4/25<br>
+Decide on how to incorporate physical objects (floating, sitting on the ground, and/or dropped into scene)<br>
+Begin programming this section by middle of the week<br>
 Begin setting up final report and demo by the start of the weekend
 
  </p>
   
   <p>
-    Week 4 (4/30-5/6):
-NOTE: FINAL PRESENTATIONS 5/4-5/5
-End of the week goal: Have final presentation and demo ready by 5/4
-Some subtasks:
-Prepare demo, final presentation, and website
+    Week 4 (4/30-5/6):<br>
+NOTE: FINAL PRESENTATIONS 5/4-5/5<br>
+End of the week goal: Have final presentation and demo ready by 5/4<br>
+Some subtasks:<br>
+Prepare demo, final presentation, and website;<br>
 Clean/optimize up simulation
  </p>
   
   <p>
-    If Time Permits:
-Read through resources in this paper and a few more (pertaining particularly to how to accurately simulate liquid-liquid interactions)
+    If Time Permits:<br>
+Read through resources in this paper and a few more (pertaining particularly to how to accurately simulate liquid-liquid interactions)<br>
 Program liquid-liquid interactions
  </p>
   
