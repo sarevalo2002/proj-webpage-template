@@ -27,32 +27,33 @@
 <h1 align="middle">CS 184 Project Milestone, Spring 2023</h1>
 <h1 align="middle"> <b> Title: </b> Liquid Simulation with Different Viscosities/Densities </h1>
 <h2 align="middle"><b>Team 75:</b> Aaron Shalf, Anthony Zhang, Eric Kusnanto, Sebastian Arevalo</h2>
+<h3 align="middle">Powerpoint URL: <a href="https://docs.google.com/presentation/d/1XHKMlXflNzNSkqD6lp-KSP_S5qtLmHld/edit#slide=id.p7">Click Here</a></h3>
 
 <br><br>
 
 <div>
 
-<h2 align="middle">What We've Accomplished</h2>
+<h2 align="middle">What We've Accomplished and Preliminary Results</h2>
   <p>
-
+    We decided to go with a fluid simulation modeled from a paper called Position Based Fluids by Macklin, Muller. In this paper, the fluid simulation is based on many spherical particle collisions which together will emulate the behavior of a fluid; when combined with a shader, it creates quite a realistic effect of water, and the paper allows includes a few formulas to test concepts such as viscosity and density, so we believe we are going in the right design direction.
   </p>
-  <br>
-  
-<h2 align="middle">Preliminary Results</h2>
   <p>
-
+    To accomplish this, we first implemented a fluid class which contains a collection of particle objects. Under the hood, these particle objects are actually using the sphere.cpp’s mesh generation in order to be rendered. However, they have a complete separate set of properties different from sphere.c which are similar to the point masses’ implementation - particles only use the sphere’s mesh to be rendered. Then, we had these particles simulated to fall due to gravity with ClothSim’s Verlet Integration, and we were able to achieve a rendering of this displayed below. The main idea we are trying to achieve is to have the fluid particles fall into a box and splash around, so we built a box consisting of rectangles which was also able to be rendered. These rectangles were constructed by truncated planes which had boundaries defined in the respective JSON files, which is also where the fluid’s parameters are specified.
+  </p>
+  <p>
+    In the end, our progress so far has allowed us to simulate and render fluids as a collection of spheres subject to external forces. As shown in our demo, we display spheres falling as a result of gravity, in the same vein as how the cloth interacts with the world in plane.json.
   </p>
   <br>
     
  <h2 align="middle">Reflection on Progress Relative to Plan</h2>
   <p>
-
+    Compared to our proposed plan, we’re a little behind, as we haven’t simulated fluids at different viscosity yet. However, now that we understand the surrounding framework of ClothSim, we believe that our current rate of progress will change exponentially, as we have the structure to simulate fluids in response to external forces. In hindsight, our previous timeline was quite ambitious, and we did not foresee how much time it would take to set up the foundations of fluid simulation. On the other hand, we believe that some of our objectives would not take an entire week to accomplish, especially Week 4’s goal of having fluid/object interaction (for context, cloth/object interaction was Task 3 in Project 4). These goals were set before we each completed Project 4, which our current project is entirely based off of, which explains the unrealistic schedule.
   </p>
   <br>
     
  <h2 align="middle">Update on Work Plan</h2>
   <p>
-
+    Since the timeline is not a long time for the goals we outlined, we are going to have to scale our efforts (luckily we have a lot of free time from 4/28 to 5/2). However, we noticed that some of our papers (specifically Position Based Fluids by Macklin, Muller) allow for an easier integration of density and viscosity than we previously thought, so the bulk of the work will likely be constructing the base fluid simulation, as well as developing accurate shaders, all in a manner that renders efficiently. As such, we hope to complete the liquid simulation portion by 4/30, and then spend 5/1 and 5/2 integrating shaders to make the visualizations look nicer.
   </p>
   <br>
 </div>
